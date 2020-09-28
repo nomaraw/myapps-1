@@ -55,7 +55,7 @@ console.log("update 16");
         checkIfReset();
 
         var configappt = false;
-        var myObj = requestMetaDataMandRAppt().plugins;
+        var myObj = requestMetaDataGPP().plugins;
         Object.keys(myObj).forEach(function (key) {
             if (myObj[key].pluginId === "10" && myObj[key].name === "Autodoc") {
                 configappt = true;
@@ -98,7 +98,7 @@ console.log("update 16");
     }
 
 
-    function requestMetaDataMandRAppt() {
+    function requestMetaDataGPP() {
         var requestMetaDataMandRObj = {};
         var pluginObject = [];
         var plugin = {};
@@ -170,7 +170,7 @@ console.log("update 16");
         if(sessionStorage.getItem('campaignName') === "MakeAPayment_GPSCC") { // TODO: change URL PAYMENT HEADER
 
             var configuration = false;
-            var myObj = requestMetaDataMandRAppt().plugins;
+            var myObj = requestMetaDataGPP().plugins;
             Object.keys(myObj).forEach(function (key) {
                 console.log(myObj[key].pluginId); // the value of the current key.
                 if (myObj[key].pluginId === "10" && myObj[key].name === "Autodoc") {
@@ -275,7 +275,7 @@ window.parent.openGPP = function() {
         var config = {
             data: {
                 member: getMemberDataMandR(),
-                request_metadata: getRequestMetadata(),
+                request_metadata: requestMetaDataGPP(),
                 message: messagesMandR()
             }
         }
