@@ -1,4 +1,4 @@
-console.log("update 16");
+console.log("update 17");
 
 (function ($, window, document, undefined) {
 
@@ -21,17 +21,10 @@ console.log("update 16");
             window.parent.sessionStorage.removeItem('autodocmnrgpp');
             window.parent.sessionStorage.removeItem('messageSuccess');
 
-            if(sessionStorage.getItem('optoutappt') !== null) {
-                sessionStorage.removeItem('optoutappt');
-            }
-
         } else if(sessionStorage.getItem('autodocmnrgpp') === null) {
             window.parent.sessionStorage.removeItem('autodocmnrgpp');
             window.parent.sessionStorage.removeItem('messageSuccess');
 
-            if(sessionStorage.getItem('optoutappt') !== null) {
-                sessionStorage.removeItem('optoutappt');
-            }
         }
         return false;
     }
@@ -291,12 +284,6 @@ window.parent.openGPP = function() {
                      $('#RULE_KEY > div:nth-child(1) > div > div > div > div > p').append('<div style="margin-bottom:10px" onclick="window.parent.openGPP()"><button type="button" id="gpppaymentheader"><div class="pzbtn-rnd" ><div class="pzbtn-lft"><div class="pzbtn-rgt" ><div class="pzbtn-mid" ><img src="webwb/zblankimage.gif" alt="" class="pzbtn-i">EZComm</div></div></div></div></button></div>');
             }    
       } 
-        
-    
 
-
-  
-
-   
 }(jQuery, window, document));
 
